@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilot Energie - Expert en Optimisation Énergétique | Béziers & Alentours</title>
+    <meta name="description" content="Pilot Energie : dépannage électrique, installation domotique, photovoltaïque. RGE QualiPV. Intervention à Béziers et 30km alentours.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-svg {
+            width: 180px;
+            height: 180px;
+        }
+        
+        .company-name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .contact-header {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: flex-end;
+        }
+        
+        .contact-header a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: transform 0.3s;
+        }
+        
+        .contact-header a:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(30,60,114,0.9), rgba(42,82,152,0.9)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%231e3c72" width="1200" height="600"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 280px 20px 100px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #ff6b35;
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255,107,53,0.4);
+        }
+        
+        .cta-button:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255,107,53,0.6);
+        }
+        
+        /* Certifications Badge */
+        .certifications-badge {
+            display: inline-flex;
+            gap: 15px;
+            margin-top: 30px;
+            background: rgba(255,255,255,0.1);
+            padding: 15px 30px;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .badge {
+            background: white;
+            color: #1e3c72;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1e3c72;
+            margin-bottom: 50px;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .service-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        /* Zone Section */
+        .zone {
+            padding: 60px 20px;
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+        }
+        
+        .zone h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .zone p {
+            font-size: 1.2rem;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 80px 20px;
+            background: white;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .contact-info {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+        }
+        
+        .contact-info h3 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .contact-info p {
+            font-size: 1.2rem;
+            color: #333;
+        }
+        
+        .contact-info a {
+            color: #ff6b35;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        footer p {
+            margin-bottom: 10px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 220px 20px 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .company-name {
+                font-size: 1.4rem;
+            }
+            
+            .certifications-badge {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .logo-svg {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <a href="mailto:pilotenergie34@gmail.com" style="text-decoration: none; display: flex; align-items: center; gap: 15px;">
+                    <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+                        <defs>
+                            <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="phoneGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#374151;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#1f2937;stop-opacity:1" />
+                            </linearGradient>
+                            <radialGradient id="sunGradient" cx="50%" cy="50%">
+                                <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+                                <stop offset="50%" style="stop-color:#f59e0b;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#d97706;stop-opacity:0.8" />
+                            </radialGradient>
+                            <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+                                <feOffset dx="0" dy="2" result="offsetblur"/>
+                                <feComponentTransfer>
+                                    <feFuncA type="linear" slope="0.3"/>
+                                </feComponentTransfer>
+                                <feMerge>
+                                    <feMergeNode/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        <circle cx="100" cy="100" r="98" fill="url(#bgGradient)"/>
+                        <circle cx="100" cy="100" r="98" fill="none" stroke="#475569" stroke-width="1"/>
+                        <circle cx="100" cy="45" r="18" fill="url(#sunGradient)" filter="url(#glow)"/>
+                        <circle cx="100" cy="45" r="14" fill="#fde047" opacity="0.4"/>
+                        <g opacity="0.6">
+                            <line x1="100" y1="22" x2="100" y2="27" stroke="#fbbf24" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="78" y1="32" x2="81" y2="35" stroke="#fbbf24" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="122" y1="32" x2="119" y2="35" stroke="#fbbf24" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="70" y1="45" x2="75" y2="45" stroke="#fbbf24" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="125" y1="45" x2="130" y2="45" stroke="#fbbf24" stroke-width="1.5" stroke-linecap="round"/>
+                        </g>
+                        <g filter="url(#glow)">
+                            <path d="M 50 60 L 35 95 L 47 95 L 25 145 L 60 100 L 47 100 Z" fill="#fbbf24" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+                            <path d="M 50 60 L 35 95 L 47 95 L 25 145 L 60 100 L 47 100 Z" fill="#fde047" opacity="0.6"/>
+                            <path d="M 48 75 L 38 95 L 47 95 L 32 125 L 55 100 L 47 100 Z" fill="#ffffff" opacity="0.4"/>
+                        </g>
+                        <text x="110" y="100" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#f8fafc" text-anchor="middle" letter-spacing="1">PILOT</text>
+                        <text x="110" y="118" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle" letter-spacing="0.5">ENERGIE</text>
+                        <g filter="url(#shadow)">
+                            <rect x="55" y="140" width="50" height="35" fill="#111827" stroke="#374151" stroke-width="1.5" rx="2"/>
+                            <rect x="58" y="143" width="44" height="29" fill="#000000" rx="1"/>
+                            <rect x="60" y="145" width="40" height="25" fill="#0a0a0a"/>
+                            <path d="M 62 162 L 65 158 L 68 160 L 71 155 L 74 157 L 77 153 L 80 156 L 83 154 L 86 158 L 89 155 L 92 157 L 95 154 L 98 156" fill="none" stroke="#10b981" stroke-width="1.5" stroke-linecap="round"/>
+                            <circle cx="62" cy="148" r="1" fill="#10b981" filter="url(#glow)">
+                                <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+                            </circle>
+                            <circle cx="66" cy="148" r="1" fill="#10b981" filter="url(#glow)"/>
+                            <text x="80" y="151" font-family="Arial, sans-serif" font-size="7" fill="#10b981" text-anchor="middle" font-weight="bold">99%</text>
+                        </g>
+                        <g filter="url(#shadow)">
+                            <rect x="115" y="138" width="28" height="45" fill="url(#phoneGradient)" stroke="#1f2937" stroke-width="1.5" rx="3"/>
+                            <rect x="125" y="140" width="8" height="1.5" fill="#0a0a0a" rx="0.5"/>
+                            <rect x="118" y="144" width="22" height="35" fill="#000000" rx="1"/>
+                            <rect x="119" y="145" width="20" height="33" fill="#0f172a" rx="0.5"/>
+                            <rect x="121" y="148" width="16" height="12" fill="#10b981" opacity="0.2" rx="1"/>
+                            <circle cx="124" cy="152" r="1.5" fill="#10b981"/>
+                            <rect x="127" y="150.5" width="3" height="3" fill="#fbbf24" rx="0.5"/>
+                            <path d="M 121 163 L 123 161 L 125 162 L 127 159 L 129 161 L 131 160 L 133 162 L 135 160 L 137 161" fill="none" stroke="#10b981" stroke-width="1" stroke-linecap="round" opacity="0.8"/>
+                            <text x="129" y="170" font-family="Arial, sans-serif" font-size="4" fill="#ffffff" text-anchor="middle" font-weight="bold" opacity="0.9">PILOT</text>
+                        </g>
+                        <g opacity="0.5">
+                            <path d="M 105 155 Q 110 152 115 155" fill="none" stroke="#3b82f6" stroke-width="1" stroke-dasharray="1.5,1"/>
+                            <path d="M 103 158 Q 110 154 117 158" fill="none" stroke="#3b82f6" stroke-width="1" stroke-dasharray="1.5,1"/>
+                            <circle cx="110" cy="161" r="1" fill="#3b82f6"/>
+                        </g>
+                    </svg>
+                    <div class="company-name">Pilot Energie</div>
+                </a>
+            </div>
+            <div class="contact-header">
+                <a href="mailto:pilotenergie34@gmail.com">✉️ pilotenergie34@gmail.com</a>
+                <a href="tel:0603007159">📞 06 03 00 71 59</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Votre Expert en Optimisation Énergétique</h1>
+        <p>Dépannage électrique, installation domotique, pilotage et optimisation de votre production solaire</p>
+        <a href="#contact" class="cta-button">Demander un devis gratuit</a>
+        <div class="certifications-badge">
+            <span class="badge">RGE Photovoltaïque</span>
+            <span class="badge">QualiPV</span>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Nos Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Dépannage Électrique</h3>
+                    <p>Intervention rapide pour tous vos problèmes électriques. Diagnostic et réparation de pannes, mise aux normes, recherche de dysfonctionnements.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Installation Domotique</h3>
+                    <p>Automatisez votre habitat pour plus de confort et d'économies. Pilotage intelligent de votre chauffage, éclairage et équipements.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">☀️</div>
+                    <h3>Photovoltaïque</h3>
+                    <p>Optimisation et pilotage de votre production solaire pour maximiser votre autoconsommation et utiliser 99% de votre production solaire.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Optimisation Énergétique</h3>
+                    <p>Analyse de votre consommation et solutions personnalisées pour réduire vos factures d'énergie tout en respectant l'environnement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zone d'intervention -->
+    <section class="zone">
+        <div class="container">
+            <h2>Zone d'Intervention</h2>
+            <p>📍 Béziers et 30 km aux alentours</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contactez-nous</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>📞 Téléphone</h3>
+                    <p><a href="tel:0603007159">06 03 00 71 59</a></p>
+                </div>
+                
+                <div class="contact-info">
+                    <h3>✉️ Email</h3>
+                    <p><a href="mailto:pilotenergie34@gmail.com">pilotenergie34@gmail.com</a></p>
+                </div>
+                
+                <div class="contact-info">
+                    <h3>📍 Secteur</h3>
+                    <p>Béziers et alentours<br>Hérault (34)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p><strong>Pilot Energie</strong> - Expert en optimisation énergétique</p>
+            <p>RGE Photovoltaïque • QualiPV</p>
+            <p>&copy; 2025 Pilot Energie - Tous droits réservés</p>
+        </div>
+    </footer>
+</body>
+</html>
